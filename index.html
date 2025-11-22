@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antojitos Goliat - Menú Legendario</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Lilita One (parecida a Clash Royale) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cr-blue': '#4384f5',
+                        'cr-orange': '#ffa500',
+                        'cr-brown': '#5d4037',
+                        'cr-card-bg': '#fdfdfd',
+                        'cr-elixir': '#d630d6',
+                        'giant-belt': '#d9534f',
+                    },
+                    fontFamily: {
+                        'clash': ['"Lilita One"', 'cursive'],
+                        'body': ['"Nunito"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            background-color: #333;
+        }
+        
+        .wood-pattern {
+            background-color: #8B4513;
+            background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0) 10px, rgba(0,0,0,0) 20px);
+            border-bottom: 4px solid #5d4037;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .card-container {
+            transition: transform 0.2s;
+        }
+        
+        .card-container:hover {
+            transform: scale(1.03) translateY(-5px);
+        }
+
+        .elixir-drop {
+            clip-path: path('M50,0 C50,0 0,40 0,75 C0,100 22,120 50,120 C78,120 100,100 100,75 C100,40 50,0 50,0 Z');
+        }
+        
+        .stat-bar {
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-800 min-h-screen pb-10">
+
+    <!-- Navbar / Header -->
+    <header class="wood-pattern sticky top-0 z-50 px-4 pt-4 pb-6 text-center border-b-4 border-black/20 shadow-xl mb-8">
+        <!-- Logo Container -->
+        <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl mx-auto">
+            <!-- Logo -->
+            <!-- AQUI ESTÁ TU NUEVO LOGO -->
+            <img 
+                src="Imagen de WhatsApp 2025-11-21 a las 23.29.37_cdaa37ee.jpg" 
+                alt="Antojitos Goliat Logo" 
+                class="h-40 md:h-56 object-contain drop-shadow-2xl filter hover:scale-105 transition-transform duration-300 mb-4"
+                onerror="this.style.display='none'; document.getElementById('fallback-title').classList.remove('hidden');"
+            >
+            
+            <!-- Fallback Title (Se muestra si la imagen falla) -->
+            <div id="fallback-title" class="hidden bg-black/20 p-4 rounded-xl backdrop-blur-sm border border-white/10 mb-4">
+                <div class="flex justify-center items-center gap-3">
+                    <i class="fa-solid fa-crown text-yellow-400 text-3xl animate-bounce"></i>
+                    <h1 class="text-3xl md:text-5xl font-clash text-white drop-shadow-[0_3px_0_rgba(0,0,0,0.8)] uppercase tracking-wide">
+                        Antojitos <span class="text-cr-orange">Goliat</span>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Contact Info Box -->
+            <div class="bg-black/40 backdrop-blur-md rounded-xl p-3 w-full max-w-md border border-white/20 shadow-lg">
+                <!-- Address -->
+                <div class="flex items-center justify-center gap-2 text-white mb-3 border-b border-white/10 pb-2">
+                    <i class="fa-solid fa-map-location-dot text-cr-orange text-xl"></i>
+                    <span class="font-body font-bold text-sm md:text-base">Frac. Vivah II, C 25 por 48 A</span>
+                </div>
+                
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/529995866292?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Antojitos%20Goliat" target="_blank" 
+                   class="group bg-green-500 hover:bg-green-600 text-white font-clash uppercase py-2 px-4 rounded-lg border-b-4 border-green-700 active:border-b-0 active:translate-y-1 transition-all flex items-center justify-center gap-3 w-full">
+                    <i class="fa-brands fa-whatsapp text-2xl group-hover:animate-bounce"></i>
+                    <div class="flex flex-col items-start leading-none">
+                        <span class="text-xs opacity-90">Haz tu pedido al:</span>
+                        <span class="text-lg tracking-wider">999-586-6292</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-4 text-center">
+        <div class="bg-cr-blue/90 rounded-2xl border-4 border-blue-800 p-4 shadow-xl max-w-3xl mx-auto mb-8 relative overflow-hidden">
+            <!-- Decorative effects -->
+            <div class="absolute top-0 left-0 w-full h-2 bg-blue-400 opacity-50"></div>
+            
+            <h2 class="text-2xl md:text-3xl font-clash text-white mb-1 drop-shadow-md mt-2">
+                "Para su Rica Cena"
+            </h2>
+            <div class="mt-2 inline-block bg-black/30 rounded-lg px-4 py-1 text-white font-bold border border-white/20 text-sm">
+                <i class="fa-regular fa-clock mr-2"></i> Horario: Noches
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8" id="filters">
+            <button onclick="filterMenu('all')" class="filter-btn bg-white border-b-4 border-gray-300 active:border-b-0 active:translate-y-1 px-6 py-2 rounded-full font-clash text-gray-700 hover:bg-yellow-100 transition-all text-lg shadow-md ring-2 ring-black">
+                Todo
+            </button>
+            <button onclick="filterMenu('antojitos')" class="filter-btn bg-cr-orange border-b-4 border-orange-700 active:border-b-0 active:translate-y-1 px-6 py-2 rounded-full font-clash text-white hover:brightness-110 transition-all text-lg shadow-md">
+                Antojitos
+            </button>
+            <button onclick="filterMenu('cena')" class="filter-btn bg-giant-belt border-b-4 border-red-800 active:border-b-0 active:translate-y-1 px-6 py-2 rounded-full font-clash text-white hover:brightness-110 transition-all text-lg shadow-md">
+                Cena Fuerte
+            </button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Items will be injected here by JS -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-white mt-12 pb-8">
+        <div class="inline-block bg-red-600 border-4 border-red-800 rounded-xl p-4 transform -rotate-2 shadow-lg mb-4">
+            <h3 class="font-clash text-2xl uppercase">Aviso Importante</h3>
+            <p class="font-body font-bold text-lg"><i class="fa-solid fa-ban mr-2"></i> DOMINGO NO LABORA</p>
+        </div>
+        
+        <div class="flex justify-center gap-4 text-2xl mt-4">
+            <a href="https://wa.me/529995866292" target="_blank" class="text-green-400 hover:text-green-300 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        
+        <p class="mt-4 text-gray-400 text-sm font-body">Creado para Antojitos Goliat • Diseño inspirado en Clash Royale</p>
+    </footer>
+
+    <!-- Modal for "Details" -->
+    <div id="modal" class="fixed inset-0 bg-black/80 z-[60] hidden flex items-center justify-center px-4">
+        <div class="bg-[#f0f0f0] rounded-xl border-4 border-gray-600 w-full max-w-md p-6 relative shadow-2xl transform scale-100 animation-pop">
+            <button onclick="closeModal()" class="absolute -top-4 -right-4 bg-red-500 text-white w-10 h-10 rounded-full border-2 border-white font-bold text-xl shadow-lg z-10">X</button>
+            
+            <div class="text-center">
+                <div class="text-5xl mb-4 text-cr-blue" id="modal-icon"></div>
+                <h3 class="text-3xl font-clash text-gray-800 mb-2" id="modal-title">Título</h3>
+                <p class="text-gray-600 font-body mb-6 text-lg" id="modal-desc">Descripción</p>
+                
+                <div class="bg-yellow-200 rounded-lg p-4 border-2 border-yellow-400 mb-4">
+                    <span class="font-clash text-2xl text-gray-800">Total: </span>
+                    <span class="font-clash text-3xl text-green-600" id="modal-price">$0</span>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <a id="modal-whatsapp-btn" href="#" target="_blank" class="w-full bg-green-500 border-b-4 border-green-700 text-white font-clash text-xl py-3 rounded-lg hover:bg-green-400 active:border-b-0 active:translate-y-1 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> Pedir este platillo
+                    </a>
+                    <button onclick="closeModal()" class="w-full bg-gray-400 border-b-4 border-gray-600 text-white font-clash text-lg py-2 rounded-lg hover:bg-gray-300 active:border-b-0 active:translate-y-1 transition-all">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos extraídos de las imágenes
+        const menuItems = [
+            // Antojitos (Image 1)
+            {
+                id: 1,
+                name: "Panucho de Pollo",
+                price: 12,
+                category: "antojitos",
+                desc: "Tortilla rellena de frijol, frita, con pollo deshebrado, lechuga y cebolla.",
+                rarity: "comun", // Azul
+                icon: "fa-drumstick-bite"
+            },
+            {
+                id: 2,
+                name: "Panucho Carne Molida",
+                price: 12,
+                category: "antojitos",
+                desc: "El clásico panucho yucateco con deliciosa carne molida sazonada.",
+                rarity: "comun",
+                icon: "fa-bowl-food"
+            },
+            {
+                id: 3,
+                name: "Panucho Carne Asada",
+                price: 15,
+                category: "antojitos",
+                desc: "La versión premium con carne asada al carbón.",
+                rarity: "especial", // Naranja
+                icon: "fa-fire-burner"
+            },
+            {
+                id: 4,
+                name: "Salbute de Pollo",
+                price: 12,
+                category: "antojitos",
+                desc: "Masa suave inflada y frita a mano, con pollo.",
+                rarity: "comun",
+                icon: "fa-feather"
+            },
+            {
+                id: 5,
+                name: "Salbute Carne Molida",
+                price: 12,
+                category: "antojitos",
+                desc: "Suave salbute con carne molida especial de la casa.",
+                rarity: "comun",
+                icon: "fa-burger"
+            },
+            {
+                id: 6,
+                name: "Salbute Carne Asada",
+                price: 15,
+                category: "antojitos",
+                desc: "Salbute nivel épico con carne asada.",
+                rarity: "especial",
+                icon: "fa-bacon"
+            },
+            {
+                id: 7,
+                name: "Empanada Jamón y Queso",
+                price: 12,
+                category: "antojitos",
+                desc: "Crujiente por fuera, derretida por dentro.",
+                rarity: "epica", // Morado
+                icon: "fa-cheese"
+            },
+            {
+                id: 8,
+                name: "Empanada Molida",
+                price: 10,
+                category: "antojitos",
+                desc: "Rellena de carne molida bien sazonada.",
+                rarity: "comun",
+                icon: "fa-bread-slice"
+            },
+
+            // Cena Fuerte (Image 2)
+            {
+                id: 9,
+                name: "Hamburguesa",
+                price: 35,
+                category: "cena",
+                desc: "Carne, queso, verduras y el sabor del Gigante.",
+                rarity: "legendaria", // Multicolor/Dorado
+                icon: "fa-burger"
+            },
+            {
+                id: 10,
+                name: "Perritos",
+                price: 10,
+                category: "cena",
+                desc: "Hot dog clásico. Ideal para el antojo rápido.",
+                rarity: "comun",
+                icon: "fa-hotdog"
+            },
+            {
+                id: 11,
+                name: "Torta de Asada",
+                price: 30,
+                category: "cena",
+                desc: "Bolillo crujiente con carne asada. ¡Llena mucho!",
+                rarity: "epica",
+                icon: "fa-sandwich" // placeholder fallback
+            }
+        ];
+
+        // Rarity Colors Mapping
+        const rarityColors = {
+            comun: { border: 'border-blue-400', bg: 'bg-blue-50', badge: 'text-blue-600' },
+            especial: { border: 'border-orange-400', bg: 'bg-orange-50', badge: 'text-orange-600' },
+            epica: { border: 'border-purple-500', bg: 'bg-purple-50', badge: 'text-purple-600' },
+            legendaria: { border: 'border-yellow-500', bg: 'bg-yellow-50', badge: 'text-yellow-600' }
+        };
+
+        const grid = document.getElementById('menu-grid');
+
+        function renderMenu(filter) {
+            grid.innerHTML = '';
+            
+            const filteredItems = filter === 'all' 
+                ? menuItems 
+                : menuItems.filter(item => item.category === filter);
+
+            filteredItems.forEach(item => {
+                const theme = rarityColors[item.rarity] || rarityColors.comun;
+                
+                const card = document.createElement('div');
+                card.className = `card-container relative bg-[#fdfdfd] rounded-xl p-1 border-[6px] ${theme.border} shadow-xl overflow-hidden cursor-pointer group`;
+                card.onclick = () => openModal(item);
+
+                card.innerHTML = `
+                    <!-- Card Inner -->
+                    <div class="bg-[#b5c2d1] h-full rounded-lg p-2 flex flex-col relative overflow-hidden">
+                        
+                        <!-- Background texture inside card -->
+                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes.png')]"></div>
+
+                        <!-- Header Image Area -->
+                        <div class="h-32 bg-gradient-to-b from-gray-200 to-white rounded-t-lg flex items-center justify-center relative border-b-4 border-black/10">
+                            <i class="fa-solid ${item.icon} text-6xl text-gray-700 drop-shadow-md group-hover:scale-110 transition-transform duration-300"></i>
+                            
+                            <!-- Elixir / Price -->
+                            <div class="absolute -top-2 -left-2 w-16 h-20 flex items-center justify-center pt-2 z-10 drop-shadow-lg">
+                                <div class="absolute inset-0 bg-pink-600 elixir-drop"></div>
+                                <span class="relative text-white font-clash text-2xl drop-shadow-md">$${item.price}</span>
+                            </div>
+                            
+                            <!-- Rarity text -->
+                            <span class="absolute top-1 right-2 text-[10px] uppercase font-bold ${theme.badge} bg-white/80 px-1 rounded">
+                                ${item.rarity}
+                            </span>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-1 bg-white mt-1 rounded-b-lg p-3 text-center relative z-10">
+                            <h3 class="font-clash text-xl text-gray-800 leading-tight mb-1">${item.name}</h3>
+                            <div class="h-1 w-full bg-gray-200 rounded-full mb-2 overflow-hidden stat-bar">
+                                <div class="h-full bg-yellow-400 w-3/4"></div>
+                            </div>
+                            <p class="font-body text-gray-500 text-xs leading-snug">${item.desc}</p>
+                        </div>
+                        
+                        <!-- Upgrade Button Lookalike -->
+                        <div class="mt-2 bg-green-500 rounded border-b-4 border-green-700 text-white font-clash text-center py-1 uppercase text-sm shadow hover:bg-green-400 transition-colors">
+                            Ver Detalles
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Modal Logic
+        const modal = document.getElementById('modal');
+        
+        function openModal(item) {
+            document.getElementById('modal-title').innerText = item.name;
+            document.getElementById('modal-desc').innerText = item.desc;
+            document.getElementById('modal-price').innerText = '$' + item.price;
+            document.getElementById('modal-icon').innerHTML = `<i class="fa-solid ${item.icon}"></i>`;
+            
+            // Configurar botón de WhatsApp dinámico en el modal
+            const whatsappMsg = `Hola! Me gustaría pedir: ${item.name} ($${item.price}).`;
+            const whatsappUrl = `https://wa.me/529995866292?text=${encodeURIComponent(whatsappMsg)}`;
+            document.getElementById('modal-whatsapp-btn').href = whatsappUrl;
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        // Initial Render
+        renderMenu('all');
+
+        // Filter Highlight Logic
+        function filterMenu(category) {
+            renderMenu(category);
+            
+            // Reset buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-black', 'scale-105');
+            });
+            
+            // Highlight active (simple visualization via event target would be better but keeping it simple)
+            // In a real app, we'd bind classes dynamically.
+        }
+    </script>
+</body>
+</html>
