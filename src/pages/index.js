@@ -9,13 +9,13 @@ import MenuGrid from "../components/MenuGrid"
 
 const menuItems = [
   { id: 1, name: "Panucho de Pollo", price: 12, category: "antojitos", desc: "Tortilla rellena de frijol, frita, con pollo deshebrado, lechuga y cebolla.", rarity: "comun", icon: "fa-drumstick-bite" },
-  { id: 2, name: "Panucho Carne Molida", price: 12, category: "antojitos", desc: "El clásico panucho yucateco con deliciosa carne molida sazonada.", rarity: "comun", icon: "fa-bowl-food" },
-  { id: 3, name: "Panucho Carne Asada", price: 15, category: "antojitos", desc: "La versión premium con carne asada al carbón.", rarity: "especial", icon: "fa-fire-burner" },
-  { id: 4, name: "Salbute de Pollo", price: 12, category: "antojitos", desc: "Masa suave inflada y frita a mano, con pollo.", rarity: "comun", icon: "fa-feather" },
-  { id: 5, name: "Salbute Carne Molida", price: 12, category: "antojitos", desc: "Suave salbute con carne molida especial de la casa.", rarity: "comun", icon: "fa-burger" },
-  { id: 6, name: "Salbute Carne Asada", price: 15, category: "antojitos", desc: "Salbute nivel épico con carne asada.", rarity: "especial", icon: "fa-bacon" },
-  { id: 7, name: "Empanada Jamón y Queso", price: 12, category: "antojitos", desc: "Crujiente por fuera, derretida por dentro.", rarity: "epica", icon: "fa-cheese" },
-  { id: 8, name: "Empanada Molida", price: 10, category: "antojitos", desc: "Rellena de carne molida bien sazonada.", rarity: "comun", icon: "fa-bread-slice" },
+  { id: 2, name: "Panucho de Carne Molida", price: 12, category: "antojitos", desc: "El clásico panucho yucateco con deliciosa carne molida sazonada.", rarity: "comun", icon: "fa-bowl-food" },
+  { id: 3, name: "Panucho de Carne Asada", price: 15, category: "antojitos", desc: "La versión premium con carne asada al carbón.", rarity: "especial", icon: "fa-fire-burner" },
+  { id: 4, name: "Salbut de Pollo", price: 12, category: "antojitos", desc: "Masa suave inflada y frita a mano, con pollo.", rarity: "comun", icon: "fa-feather" },
+  { id: 5, name: "Salbut de Carne Molida", price: 12, category: "antojitos", desc: "Suave salbut con carne molida especial de la casa.", rarity: "comun", icon: "fa-burger" },
+  { id: 6, name: "Salbut de Carne Asada", price: 15, category: "antojitos", desc: "Salbut nivel épico con carne asada.", rarity: "especial", icon: "fa-bacon" },
+  { id: 7, name: "Empanada de Jamón y Queso", price: 12, category: "antojitos", desc: "Crujiente por fuera, derretida por dentro.", rarity: "epica", icon: "fa-cheese" },
+  { id: 8, name: "Empanada de Molida", price: 10, category: "antojitos", desc: "Rellena de carne molida bien sazonada.", rarity: "comun", icon: "fa-bread-slice" },
   { id: 9, name: "Hamburguesa", price: 35, category: "cena", desc: "Carne, queso, verduras y el sabor del Gigante.", rarity: "legendaria", icon: "fa-burger" },
   { id: 10, name: "Perritos", price: 10, category: "cena", desc: "Hot dog clásico. Ideal para el antojo rápido.", rarity: "comun", icon: "fa-hotdog" },
   { id: 11, name: "Torta de Asada", price: 30, category: "cena", desc: "Bolillo crujiente con carne asada. ¡Llena mucho!", rarity: "epica", icon: "fa-hotdog" }
